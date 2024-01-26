@@ -1,9 +1,3 @@
-import os
-os.system('cls')
-
-a = float(input("Ingrese a: "))
-b = float(input("Ingrese b: "))
-
 def resolver_ecuacion_lineal(a, b):
     # Verificar si 'a' es diferente de cero para evitar divisiones por cero
     if a != 0:
@@ -13,8 +7,10 @@ def resolver_ecuacion_lineal(a, b):
     else:
         # La ecuación no tiene solución si 'a' es igual a cero
         return "La ecuación no tiene solución real cuando 'a' es igual a cero."
-    
-x = -b/a
+
+# Ejemplo de uso
+a = 3
+b = -6
 solucion = resolver_ecuacion_lineal(a, b)
-    
+
 print(f"La solución de {a}x + {b} = 0 es x = {solucion}")
