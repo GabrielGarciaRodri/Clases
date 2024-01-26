@@ -1,0 +1,9 @@
+def Operaciones(numero1:int, numero2:int, operador:str):
+    if (operador == '+'):   
+        return numero1 + numero2 
+    elif (operador == '-'):
+        return numero1 - numero2 
+    elif (operador == '*'):
+        return numero1 - numero2
+    elif (operador == '/'):
+        return numero1 - numero2
