@@ -5,7 +5,7 @@ num = int(input("¿Cuantos numeros va a ingresar?) "))
 
 lista = []
 
-for i in range (1, num + 1):
+for i in range (num):
     numero = float (input(f"ingrese el numero {i}: "))
     #almacena el numero i dentro de la lista con append
     lista.append(numero)
