@@ -1,3 +1,6 @@
+import os
+os.system('cls')
+
 def es_primo(num):
     if num < 2:
         return False
