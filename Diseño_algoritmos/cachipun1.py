@@ -43,9 +43,3 @@ if puntaje1 > puntaje2:
 
 else:
     print (f"el ganador es el jugador 2 ")
-
-
-
-
-
-
