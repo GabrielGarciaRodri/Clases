@@ -30,6 +30,5 @@ def encontrar_espejo_primo_n(n):
 
         numero += 1
 
-n = 12  # Puedes cambiar el valor de n según tu pregunta
+n = 73 
 encontrar_espejo_primo_n(n)
-#djsdjds

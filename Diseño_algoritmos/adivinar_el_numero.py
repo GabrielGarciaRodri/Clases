@@ -1,7 +1,7 @@
 import os
 os.system('cls')
 
-"""from random import randrange
+""""from random import randrange
 n = randrange(101)
 
 intentos = 0
