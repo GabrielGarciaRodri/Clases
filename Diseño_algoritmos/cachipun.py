@@ -1,41 +1,51 @@
 import os
 os.system('cls')
 
+#Crea la funcion para predefinir que cosa le gana a que
+#usando el diccionario de opciones, y con el if retorna 
+#las opciones que los jugadores eligieron
+def ganador(player1, player2):
+    opciones = {
+        "piedra": "tijera",
+        "tijera": "papel",
+        "papel" : "piedra"
+    }
+
+    if opciones[player1] == player2:
+        return 'player1'
+    elif opciones[player2] == player1:
+        return 'player2'
+    else:
+        player1 == player2
+        return 'empate'
+    
+puntaje1 = 0
+puntaje2 = 0
+limite = 3
 print("Las jugadas posibles son: Piedra, Papel, Tijera. . . ")
-player1 = input("Escriba su jugada player 1: ")
-player2 = input("Escriba su jugada player 2: ")
 
-empate = 0
 
-if player1 == player2:
-    empate += 1
-    print("Empate")
+while puntaje1 < limite and puntaje2 < limite:
+    player1 = input("Escriba su jugada player 1: ").lower()
+    player2 = input("Escriba su jugada player 2: ").lower()
 
-# import random
+    jugada = ganador(player1, player2)
+    print(f"ganador de ronda: {jugada}")
 
-# # Relaciones de ganador y perdedor
-# relaciones = {
-#     "piedra": "tijera",
-#     "tijera": "papel",
-#     "papel": "piedra"
-# }
+    if jugada == 'player1':
+        puntaje1 += 1
+    
+    elif jugada == 'player2':
+        puntaje2 += 1   
 
-# # Elección preestablecida del usuario
-# eleccion_usuario = "piedra"
+if puntaje1 > puntaje2:
+    print (f"El ganador es el jugador 1")
 
-# # Elección aleatoria de la máquina
-# opciones = list(relaciones.keys())
-# eleccion_maquina = random.choice(opciones)
+else:
+    print (f"el ganador es el jugador 2 ")
 
-# # Imprimir las elecciones
-# print(f"Usuario eligió: {eleccion_usuario}")
-# print(f"Máquina eligió: {eleccion_maquina}")
 
-# # Determinar el ganador
-# if eleccion_usuario == eleccion_maquina:
-#     print("Empate")
-# elif relaciones[eleccion_usuario] == eleccion_maquina:
-#     print("¡Ganaste!")
-# else:
-#     print("La máquina gana.")
+
+
+
 
