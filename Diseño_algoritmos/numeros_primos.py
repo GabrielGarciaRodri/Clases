@@ -44,7 +44,16 @@ while contador < n:
         contador += 1
     numero += 1
 
+#Escriba un programa que cuente cuántos 
+#son los números primos menores que m
+#, donde m es ingresado por el usuario:
 
+m = int(input("Ingrese un numero: "))
+primo = True
+for i in range (2, int(numero**0.5) + 1):
+    if numero % i == 0:
+        primo = False
+        break
 
 
 
