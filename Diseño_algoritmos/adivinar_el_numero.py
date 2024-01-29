@@ -11,7 +11,7 @@ while True:
     intentos += 1
 
     if intento == n:
-        print("Felicidades, acertaste!!!")
+        print(f"Felicidades, adivinaste en {intentos} intentos!!!")
         break
     elif intento < n:
         print(f"Es mayor que {intento}")
