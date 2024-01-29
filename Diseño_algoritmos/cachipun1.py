@@ -29,8 +29,13 @@ while puntaje1 < limite and puntaje2 < limite:
     player1 = input("Escriba su jugada player 1: ").lower()
     player2 = input("Escriba su jugada player 2: ").lower()
 
+    #invoca la funcion
     jugada = ganador(player1, player2)
-    print(f"ganador de ronda: {jugada}")
+
+    if jugada == "empate":
+        print("Empate")
+    else:
+        print(f"ganador de ronda: {jugada}")
 
     if jugada == 'player1':
         puntaje1 += 1
@@ -38,8 +43,13 @@ while puntaje1 < limite and puntaje2 < limite:
     elif jugada == 'player2':
         puntaje2 += 1   
 
+    print(f"Player 1: {puntaje1}")
+    print(f"Player 2: {puntaje2}")
+    os.system('pause')
+    os.system('cls')
+
 if puntaje1 > puntaje2:
-    print (f"El ganador es el jugador 1")
+    print (f"¡¡¡¡¡¡GANA EL JUGADOR 1!!!!!!!")
 
 else:
-    print (f"el ganador es el jugador 2 ")
+    print (f"¡¡¡¡¡¡GANA EL JUGADOR 2!!!!!!!")
