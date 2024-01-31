@@ -24,7 +24,7 @@ def read():
              *        TABLA DEL CAMPER       *
              ********************************* 
             """)
-    print (tabulate(getAll(),headers=["Nombres","Apellidos","Edad"]))
+    print(tabulate(getAll(),headers=["Nombres","Apellidos","Edad"]))
     os.system('pause')
     
 def update():
