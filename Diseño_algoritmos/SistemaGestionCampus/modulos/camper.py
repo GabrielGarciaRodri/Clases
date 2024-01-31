@@ -1,6 +1,6 @@
 #Guarda la funcionalidad del CRUD
 import os
-
+from tabulate import tabulate
 from .variables import save, getAll
 
 def create():
@@ -25,11 +25,8 @@ def read():
              ********************************* 
             """)
     os.system('cls')
-    plantilla = ""
-    for i, val in enumerate(getAll()):
-        
-        print(getAll())
-        os.system('pause')
+    print (tabulate(getAll()))
+    os.system('pause')
     
 def update():
     print("El camper se actualizó")
