@@ -5,3 +5,5 @@ def save(data):
     
 def getAll():
     return camper 
+
+copiasCamper = []

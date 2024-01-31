@@ -1,7 +1,7 @@
 #Guarda la funcionalidad del CRUD
 import os
 from tabulate import tabulate
-from .variables import save, getAll, camper
+from .variables import save, getAll, camper, copiasCamper
 
 def create():
     
@@ -51,7 +51,50 @@ def read(codigo=None):
     os.system('pause')
     
 def update():
-    print("El camper se actualizó")
+
+    bandera = True
+    while (bandera):
+        os.system('cls')
+        read()
+        print("""
+        *********************************
+        *       ACTUALIZAR CAMPER       *
+        ********************************* 
+            """)
+        codigo = int(input(f"Ingrese el codigo del camper que desea actualizar:\n "))
+        read(codigo)
+        print("""
+            ¿Está seguro que desea actualizar al camper?
+            1. Si
+            2. No
+            3. Cancelar
+            """)
+        opc = int(input())
+        match(opc):
+            case 1:
+                val = {
+                    "Nombre": input("Ingrese el nombre del camper: "),
+                    "Apellido": input("Ingrese el nombre del camper: "),
+                    "Edad": int (input("Ingrese la edad del camper: "))
+                }
+                camper [codigo-1] = val
+                os.system('cls')
+                
+                print(f"""
+                    Camper Actualizado:
+                    __________________________________
+                    Codigo: {codigo}  
+                    Nombre: {val.get("Nombre")}
+                    Apellido: {val.get("Apellido")}                            
+                    Edad: {val.get("Edad")}
+                    __________________________________
+                    """)
+                os.system("pause")
+                bandera = False
+                
+                
+            case 3:
+                bandera = False
 
 def delete():
     
@@ -94,7 +137,7 @@ def delete():
                 bandera = False
     
 def menu():
-    
+
     
     """El siguiente try permite repetir la opcion en caso de que
     El usuario se equivoque"""
